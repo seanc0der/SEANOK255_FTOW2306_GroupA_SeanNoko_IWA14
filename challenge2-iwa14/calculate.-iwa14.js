@@ -1,12 +1,12 @@
-function add = a, b => { a + b }
+const add = (a, b) => a + b;
 
-function multiply = a, b => { a - b }
+const multiply = (sum, c) => sum * c;
 
-function internal() {
-	const added = this.add(this.a, this.b)
-	this.multiply(this.a, this.b)
-	return this
-}
+const internal = function () {
+	const sum = this.add(this.internal.a, this.internal.b);
+	const product = this.multiply(sum, this.internal.c);
+	console.log(product);
+};
 
 // Not allowed to change below this
 
@@ -18,8 +18,8 @@ const example1 = {
 	},
 	add,
 	multiply,
-  calculate: internal
-}
+	calculate: internal,
+};
 
 const example2 = {
 	internal: {
@@ -29,8 +29,8 @@ const example2 = {
 	},
 	add,
 	multiply,
-  calculate: internal
-}
+	calculate: internal,
+};
 
-example1.calculate()
-example2.calculate()
+example1.calculate();
+example2.calculate();

@@ -1,14 +1,12 @@
-firstName = "John";
-age = 35;
-hobby = "Coding";
+let firstName = "John";
+let age = 35;
+let hobby = "Coding";
 
-const logTwice = () => {
-	console(parameter);
-	console(parameter);
+const logTwice = (message) => {
+	console.log(message);
+	console.log(message);
 };
 
-function hobby() {
-	logTwice(`Hello, ${name} (${age}). I love ${hobby}!`);
-}
+const logMessage = `Hello, ${firstName} (${age}). I love ${hobby}!`;
 
-hobby();
+logTwice(logMessage);
